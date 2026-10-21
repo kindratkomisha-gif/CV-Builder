@@ -1,0 +1,186 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden; 
+    background-color: #f4f7f6;
+}
+
+.main-area {
+    display: flex;
+    flex-direction: row;
+    height: 100vh; 
+}
+
+.left-area {
+    padding: 30px; 
+    display: flex;
+    flex-direction: column;
+    width: 35%;    
+    background-color: #ffffff;
+    border-right: 1px solid #e0e0e0;
+    overflow-y: auto; 
+    box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+}
+
+.right-area {
+    width: 65%;             
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    background-color: #525659; 
+    overflow-y: auto;       
+    height: 100vh;
+    padding: 60px 20px;
+}
+
+.resume-paper {
+    background-color: white;
+    padding: 25mm;           
+    width: 210mm;           
+    min-height: 297mm;      
+    max-width: 100%;
+    flex-shrink: 0;          
+    flex-grow: 0;       
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    word-break: break-word;
+    hyphens: auto;
+}
+
+.resume-header {
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 3px solid #2c3e50;
+    padding-bottom: 25px;
+}
+
+.resume-header h1 {
+    font-size: 32px;
+    color: #2c3e50;
+    margin-bottom: 12px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-info {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.resume-section {
+    margin-top: 35px;
+}
+
+.section-title {
+    font-size: 19px;
+    color: #2c3e50;
+    text-transform: uppercase;
+    border-bottom: 2px solid #eee;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    font-weight: 700;
+}
+
+.section-content {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333;
+    white-space: pre-wrap;
+}
+
+.left-area input,
+.left-area textarea {
+    width: 100%;
+    margin-bottom: 18px;
+    padding: 14px;
+    border: 1px solid #d1d1d1;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.2s ease;
+    font-family: inherit;
+    background-color: #fafafa;
+}
+
+.left-area textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.left-area input:focus,
+.left-area textarea:focus {
+    outline: none;
+    border-color: #3498db; 
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+#add-kontakt {
+    padding: 12px;
+    cursor: pointer;
+    margin-bottom: 25px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+#add-kontakt:hover {
+    background-color: #2980b9;
+}
+
+#add-kontakt p {
+    margin: 0;
+}
+
+#download-pdf {
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#download-pdf:hover {
+    background-color: #219150;
+}
+
+@media print {
+    .left-area, #download-pdf, .right-area {
+        background: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .left-area {
+        display: none !important;
+    }
+
+    .right-area {
+        width: 100% !important;
+        overflow: visible !important;
+    }
+
+    .resume-paper {
+        box-shadow: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 210mm;
+        height: 297mm;
+    }
+    
+    body {
+        overflow: visible !important;
+    }
+}
