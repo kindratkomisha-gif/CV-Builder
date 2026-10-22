@@ -19,8 +19,11 @@ JavaScript (ES6+) — Data binding, DOM manipulation, and dynamic field handling
 Project Structure:
 
 .
+
 ├── main.html      # Main HTML structure and form
+
 ├── style.css      # Application styles and print layout
+
 └── skript.js     # Interactivity, data binding, and rendering logic
 
 
